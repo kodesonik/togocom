@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "togo-com": {
+      "hosting": {
+        "counter": [
+          "counter-tgcom"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "togo-com"
+  }
+}

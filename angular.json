@@ -48,7 +48,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "projects/counter/src/environments/environment.ts",
+                  "with": "projects/counter/src/environments/environment.prod.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -96,6 +102,16 @@
               "projects/counter/src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "counter:build:production",
+            "firebaseProject": "togo-com",
+            "firebaseHostingSite": "counter-tgcom"
           }
         }
       }
